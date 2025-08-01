@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shop - BHRAMIX Footwear</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+ 
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #0b6d67;
+      margin-bottom: 40px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s;
+      text-align: center;
+    }
+
+    .product-card:hover {
+      transform: scale(1.03);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .product-details .brand {
+      font-weight: 600;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .product-details .name {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 5px;
+    }
+
+    .product-details .price {
+      color: #28a745;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .rating {
+      color: gold;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .size-select {
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+
+    .cart-icon {
+      background-color: #0b6d67;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .cart-icon:hover {
+      background-color: #05504b;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Shop Trending Shoes</h1>
+  <div class="product-grid">
+
+    <!-- Product 1 -->
+    <div class="product-card">
+      <img src="https://res.cloudinary.com/dslbun9vq/image/upload/v1753881650/shoe_yrjvzl.jpg" alt="New Balance">
+      <div class="product-details">
+        <div class="brand">New Balance</div>
+        <div class="name">Stylish Men-shoe</div>
+        <div class="price">$45</div>
+        <div class="rating">★★★★★</div>
+      </div>
+      <select class="size-select" id="size-newbalance">
+        <option value="6">Size 6</option>
+        <option value="7">Size 7</option>
+        <option value="8">Size 8</option>
+        <option value="9">Size 9</option>
+        <option value="10">Size 10</option>
+      </select>
+      <button class="cart-icon"
+        data-name="New Balance"
+        data-price="45"
+        data-img="https://res.cloudinary.com/dslbun9vq/image/upload/v1753881650/shoe_yrjvzl.jpg"
+        data-desc="Super comfortable shoes with 100% flexibility"
+        data-size-id="size-newbalance">
+        Add to Cart
+      </button>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <img src="https://res.cloudinary.com/dslbun9vq/image/upload/v1753882442/shoe1_znum9h.jpg" alt="Skechers">
+      <div class="product-details">
+        <div class="brand">Skechers</div>
+        <div class="name">Lightweight Comfort</div>
+        <div class="price">$50</div>
+        <div class="rating">★★★★★</div>
+      </div>
+      <select class="size-select" id="size-skechers">
+        <option value="6">Size 6</option>
+        <option value="7">Size 7</option>
+        <option value="8">Size 8</option>
+        <option value="9">Size 9</option>
+        <option value="10">Size 10</option>
+      </select>
+      <button class="cart-icon"
+        data-name="Skechers"
+        data-price="50"
+        data-img="https://res.cloudinary.com/dslbun9vq/image/upload/v1753882442/shoe1_znum9h.jpg"
+        data-desc="Lightweight and breathable everyday shoes"
+        data-size-id="size-skechers">
+        Add to Cart
+      </button>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+      <img src="https://res.cloudinary.com/dslbun9vq/image/upload/v1753882442/shoe2_reuq7d.jpg" alt="Adidas">
+      <div class="product-details">
+        <div class="brand">Adidas</div>
+        <div class="name">Performance Sports Shoe</div>
+        <div class="price">$78</div>
+        <div class="rating">★★★★★</div>
+      </div>
+      <select class="size-select" id="size-adidas">
+        <option value="6">Size 6</option>
+        <option value="7">Size 7</option>
+        <option value="8">Size 8</option>
+        <option value="9">Size 9</option>
+        <option value="10">Size 10</option>
+      </select>
+      <button class="cart-icon"
+        data-name="Adidas"
+        data-price="78"
+        data-img="https://res.cloudinary.com/dslbun9vq/image/upload/v1753882442/shoe2_reuq7d.jpg"
+        data-desc="High-performance shoe for sports and running"
+        data-size-id="size-adidas">
+        Add to Cart
+      </button>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-card">
+      <img src="https://res.cloudinary.com/dslbun9vq/image/upload/v1753882442/shoe3_slhmtw.jpg" alt="Nike">
+      <div class="product-details">
+        <div class="brand">Nike</div>
+        <div class="name">Everyday Trainers</div>
+        <div class="price">$55</div>
+        <div class="rating">★★★★★</div>
+      </div>
+      <select class="size-select" id="size-nike">
+        <option value="6">Size 6</option>
+        <option value="7">Size 7</option>
+        <option value="8">Size 8</option>
+        <option value="9">Size 9</option>
+        <option value="10">Size 10</option>
+      </select>
+      <button class="cart-icon"
+        data-name="Nike"
+        data-price="55"
+        data-img="https://res.cloudinary.com/dslbun9vq/image/upload/v1753882442/shoe3_slhmtw.jpg"
+        data-desc="Everyday trainers with responsive cushioning"
+        data-size-id="size-nike">
+        Add to Cart
+      </button>
+    </div>
+
+  </div>
+
+  <script>
+document.querySelectorAll(".cart-icon").forEach(button => {
+  button.addEventListener("click", () => {
+    const name = button.getAttribute("data-name");
+    const price = "$" + button.getAttribute("data-price");
+    const img = button.getAttribute("data-img");
+    const desc = button.getAttribute("data-desc");
+
+    const sizeId = button.getAttribute("data-size-id");
+    const size = document.getElementById(sizeId).value;  // ✅ Get selected size from the select element
+
+    const cartItem = { name, price, img, size, quantity: 1 };
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push(cartItem);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(name + " (Size: " + size + ") added to cart!");
+  });
+});
+</script>
+
+
+</body>
+</html>
